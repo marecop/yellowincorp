@@ -8,6 +8,11 @@
     <link rel="icon" href="./logoremovebkgnd.png" type="image/png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+      const redirect = sessionStorage.redirect
+      if (redirect) {
+      sessionStorage.removeItem('redirect')
+      history.replaceState(null, '', redirect)
+      }
       tailwind.config = {
         theme: {
           extend: {
