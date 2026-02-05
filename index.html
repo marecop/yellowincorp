@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>Yellow Incorporation</title>
+    <meta name="description" content="Yellow Incorporation Corporate Website" />
+    <link rel="icon" href="./logoremovebkgnd.png" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const redirectPath = sessionStorage.redirectPath;
+      if (redirectPath) {
+        sessionStorage.removeItem('redirectPath');
+        history.replaceState(null, null, redirectPath);
+      }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              corporate: {
+                gold: '#D4AF37', // Metallic Gold
+                lightGold: '#F3E5AB', // Vanilla / Cream Gold
+                soft: '#FDFCF5', // Very light background
+                dark: '#2d2d2d', // Charcoal for text
+                accent: '#B49B57', // Muted gold
+                slate: '#4B5563'
+              }
+            },
+            fontFamily: {
+              sans: ['Helvetica Neue', 'Arial', 'sans-serif'],
+              serif: ['Georgia', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      /* Mobile touch optimizations */
+      * {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+      
+      /* Prevent text selection on buttons and links */
+      button, a {
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      
+      /* Better touch targets for mobile */
+      @media (max-width: 640px) {
+        button, a {
+          min-height: 44px;
+          min-width: 44px;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-g_n9q8V6.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-zv46c0c7.css">
+</head>
+  <body class="bg-corporate-soft text-corporate-dark antialiased">
+    <div id="root"></div>
+</body>
+</html>
