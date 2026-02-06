@@ -1,0 +1,6 @@
+# robots.txt for Yellow Incorporation
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.flaps1f.com/sitemap.xml
